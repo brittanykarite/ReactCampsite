@@ -34,7 +34,7 @@ const campsitesSlice = createSlice({
             state.errMsg = '';
             state.campsitesArray = mapImageURL(action.payload);
         },
-        [fetch.rejected]: (state, action) => {
+        [fetchCampsites.rejected]: (state, action) => {
             state.isLoading = false;
             state.errMsg = action.error ? action.error.message: 'Fetch failed';
         }
